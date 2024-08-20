@@ -1,0 +1,3 @@
+@function calc-vw($target-size, $resolution) {
+  @return (($target-size / $resolution) * 100vw)
+}
