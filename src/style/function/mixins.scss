@@ -1,0 +1,9 @@
+@mixin transition($properties...) {
+	$transition-properties: ();
+
+	@each $property in $properties {
+		$transition-properties: append($transition-properties, #{$property} .2s cubic-bezier(0.12, 0, 0.39, 0), comma);
+	}
+
+	transition: $transition-properties;
+}

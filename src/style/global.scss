@@ -1,0 +1,52 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+ul[role='list'], ol[role='list']{
+  list-style: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+
+html:focus-within{
+  scroll-behavior: smooth;
+}
+
+a:not([class]){
+  text-decoration-skip-ink: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img, picture, svg, video, canvas{
+  max-width: 100%;
+  height: auto;
+}
+
+img, picture, svg, video, canvas{
+  vertical-align: middle;
+}
+
+body, html{
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow: hidden;
+  background: #161617;
+  background: linear-gradient(45deg, rgba(29,29,31,1) 0%, rgba(22,22,23,1) 25%, rgba(22,22,23,1) 50%, rgba(22,22,23,1) 75%, rgba(22,22,23,1) 100%);
+}
+body {
+  display: flex;
+}
