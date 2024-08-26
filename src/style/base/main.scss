@@ -1,55 +1,11 @@
-.box-1 {
-	overflow: hidden;
-	float: left;
-	box-sizing: border-box;
-	position: relative;
-	margin: 10px;
-	border-left: 3px solid;
-	border-bottom: 3px solid;
-	height: 250px;
-	width: 400px;
-	line-height: 20px;
-	background: red;
-	border-radius: 10px 0 10px 10px;
-	mix-blend-mode: difference;
-}
-
-.box-2::before {
-	content: "";
-	position: absolute;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	top: 0;
-	left: -10px;
-	background: transparent;
-	box-shadow: 5px -5px 0px 0px red;
-}
-.box-2::after {
-	content: "";
-	position: absolute;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	bottom: -10px;
-	right: 0;
-	background: transparent;
-	box-shadow: 5px -5px 0px 0px red;
-}
-
-.box-2 {
-	float: right;
-	mix-blend-mode: difference;
-	position: relative;
-	right: 0;
-	top: 0;
-	content: '';
-	background: red;
-	height: 50%;
-	width: 200px;
-	border-radius: 0 0 0 10px;
-}
-
-.box-3 {
-	overflow: hidden;
+main {
+    width: 100%;
+    margin-right: calc-vw(70, $desktop);
+    display: flex;
+    gap: calc-vw(12, $desktop);
+    padding-top: calc-vw(20, $desktop);
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
 }

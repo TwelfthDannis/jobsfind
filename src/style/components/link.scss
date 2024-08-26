@@ -1,0 +1,41 @@
+
+
+.nav__link {
+    --width-icon: #{calc-vw(40, $desktop)};
+
+    display: block;
+    border-radius: 50%;
+    outline: calc-vw(1, $desktop) solid $secondary-grey;
+    padding: calc-vw(10, $desktop);
+    width: var(--width-icon);
+    height: var(--width-icon);
+
+    @include transition(background,outline);
+
+    &:hover {
+        background: $secondary-white;
+        outline: calc-vw(1, $desktop) solid $primary-five;
+
+        svg {
+            fill: $primary-five;
+
+            g {
+                fill: $primary-five;
+            }
+        }
+    }
+
+    svg {
+        display: block;
+        fill: $secondary-grey;
+
+        @include transition(fill);
+
+        g {
+            fill: $secondary-grey;
+
+            @include transition(fill);
+
+        }
+    }
+}

@@ -1,0 +1,90 @@
+$radius-and-padding-group-button: 24;
+$size-mini-card: 470;
+
+:root {
+    --card-background: #{$primary-third};
+    --card-border-radius: #{calc-vw($radius-and-padding-group-button, $desktop)};
+    --size-width-mini-card: #{calc(100% / 3 - 2 * calc-vw(4, $desktop))};
+    --size-height-mini-card: #{calc-vw(calc($size-mini-card * .5), $desktop)};
+}
+
+// size card
+.mini-card {
+    display: flex;
+    flex-direction: column;
+    height: var(--size-height-mini-card);
+    width: var(--size-width-mini-card);
+    filter: drop-shadow(0 calc-vw(5, $desktop) calc-vw(1, $desktop) rgba(0, 0, 0, 0.1));
+}
+
+.card__header {
+    width: 100%;
+    display: flex;
+}
+
+.card__header-title {
+    display: flex;
+    flex: 1;
+    background: var(--card-background);
+    border-radius: calc-vw(24, $desktop) calc-vw(18, $desktop) 0 0;
+    padding-inline: calc-vw(10, $desktop) calc-vw(6, $desktop);
+    padding-top: calc-vw(10, $desktop);
+
+    span {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.card__header-title-icon {
+    display: block;
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: $secondary-white;
+    margin-right: calc-vw(10, $desktop);
+
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.card__header-button-action {
+    position: relative;
+    padding: calc-vw(8 , $desktop);
+    border-bottom-left-radius: 50%;
+    box-shadow: var(--card-background) calc-vw(-18, $desktop) calc-vw(18, $desktop);
+
+/*    &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--card-background);
+        mask-image:
+            linear-gradient(to bottom, white, white),
+            radial-gradient(red 70%, transparent 0%);
+        mask-size: 50% 50%, 100%;
+        mask-position: bottom left, center;
+        mask-repeat: no-repeat, repeat;
+        mask-composite: subtract;
+    }*/
+}
+
+.card__description {
+    flex: 1;
+    height: auto;
+    background: var(--card-background);
+    border-radius: 0 calc-vw(18, $desktop) calc-vw(24, $desktop) calc-vw(18, $desktop);
+    padding: calc-vw(10, $desktop);
+}
